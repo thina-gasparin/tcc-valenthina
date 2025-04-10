@@ -22,11 +22,8 @@
 </head>
 
 <body>
-
-    <main>
+    <div class="wrapper">
         <header>
-            <div class="wrapper"> <!-- Novo wrapper para separar o menu -->
-
                 <div class="menu-desktop">
                     <button onclick="abrirmenu()" id="btn-menu">
                         <span class="linha"></span>
@@ -44,7 +41,6 @@
                     </nav>
                 </div>
 
-
                 <div class="menu-mobile" id="menu-mobile">
                     <nav>
                         <ul>
@@ -56,39 +52,74 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="container-wrapper">
-                    <div class="form-container">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Finalizar a Ocorrencia</h5>
-                            </div>
-                            <div class="modal-body">
-                                <form id="userForm">
+                    <!-- Card do aluno -->
+                    <div id="studentInfo" class="student-info"></div>
 
-                                    <div class="mb-3">
-                                        <label for="relato" class="form-label">Relato do aluno</label>
-                                        <textarea class="form-control" id="relato" rows="2" required></textarea>
-                                    </div>
+        </header>
+        <main>
+            <div class="cabecalho">
+                Aluno xxxx
+            </div>
+            <div class="form-container">
+                <form id="userForm">
 
-                                    <div class="mb-3">
-                                        <label for="relato" class="form-label">Conduta</label>
-                                        <textarea class="form-control" id="relato" rows="2" required></textarea>
-                                    </div>
+                    <!--Linha Nome e Sala-->
+                    <div class="form-row">
 
-                                    <button type="submit" class="btn btn-primary" id="botaoOk">Enviar</button>
-                                </form>
-                            </div>
+                        <!--Nome-->
+                        <div class="dadosFormsCoordenacao nome">
+                            <label for="nome" class="labelFormsCoordenacao">Nome</label><br>
+                            <input class="inputFormsCoordenacao" type="text" id="nome">
+                        </div>
+
+                        <!--Sala-->
+                        <div class="dadosFormsCoordenacao sala">
+                            <label for="sala" class="labelFormsCoordenacao">Sala</label><br>
+                            <input class="inputFormsCoordenacao" type="text" id="sala">
                         </div>
                     </div>
 
-                    <!-- Card do aluno -->
-                    <div id="studentInfo" class="student-info"></div>
-                </div>
+                    <!--Linha Arquivos, Tipo de Ocorrência e Peso-->
+                    <div class="form-row">
 
-            </div>
-        </header>
-    </main>
+                        <!--Arquivos-->
+                        <div class="dadosFormsCoordenacao sala">
+                            <label for="arquivos" class="labelFormsCoordenacao">Arquivos</label><br>
+                            <input class="inputFormsCoordenacao" type="text" id="arquivos">
+                        </div>
 
+                        <!--Tipo de Ocorrência-->
+                        <div class="dadosFormsCoordenacao sala">
+                            <label for="tipoOcorrencia" class="labelFormsCoordenacao">Tipo de Ocorrência</label><br>
+                            <input class="inputFormsCoordenacao" type="text" id="tipoOcorrencia">
+                        </div>
+
+                        <!--Peso Sugerido-->
+                        <div class="dadosFormsCoordenacao sala">
+                            <label for="pesoSugerido" class="labelFormsCoordenacao">Peso Sugerido</label><br>
+                            <input class="inputFormsCoordenacao" type="text" id="pesoSugerido">
+                        </div>
+                    </div>
+
+                    <!--Relato do Aluno-->
+                    <div class="dadosFormsCoordenacao">
+                        <label for="relato" class="labelFormsCoordenacao">Relato do aluno</label>
+                        <textarea class="textareaFormsCoordenacao" id="relato" rows="2" required></textarea>
+                    </div>
+
+                    <!--Conduta-->
+                    <div class="dadosFormsCoordenacao">
+                        <label for="conduta" class="labelFormsCoordenacao">Conduta da Orientação</label>
+                        <textarea class="textareaFormsCoordenacao" id="relato" rows="2" required></textarea>
+                    </div>
+                    
+                    <!--Botão Enviar-->
+                    <div class="buttonRowCoordenacao">
+                        <button type="submit" class="buttonFormsCoordenacao enviar" id="enviar">Enviar</button>
+                    </div>
+                </form>
+        </main>
+    </div>
 
     <script>
         /*codigo para o menu do site */
